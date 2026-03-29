@@ -1,0 +1,30 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --button-bg: rgb(231, 130, 130);
+}
+
+body.dark {
+  --bg-color: black;
+  --text-color: white;
+  --button-bg: brown;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: var(--button-bg);
+  border: 0;
+  border-radius: 5px;
+  font-size: 42px;
+  padding: 20px;
+}
