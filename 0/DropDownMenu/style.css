@@ -1,0 +1,33 @@
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  padding: 2%;
+  background-color: rgb(53, 49, 44);
+}
+.navButton {
+  text-decoration: none;
+  padding: 5px;
+  color: azure;
+}
+.dropdown {
+  position: relative;
+}
+.dropDownContent {
+  display: none;
+  position: absolute;
+  background-color: bisque;
+  min-width: 160px;
+  top: 100%;
+  right: 0;
+}
+.dropdown:hover .dropDownContent {
+  display: flex;
+  flex-direction: column;
+}
+.dropDownButton {
+  text-decoration: none;
+  color: black;
+}
+.dropDownButton:hover {
+  background-color: green;
+}
