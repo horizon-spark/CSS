@@ -3,3 +3,31 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
 }
+.picture {
+  width: 200px;
+  height: 150px;
+}
+#id_1 {
+  background-color: rgb(0, 0, 0);
+}
+#id_2 {
+  background-color: rgb(255, 0, 0);
+}
+#id_3 {
+  background-color: rgb(0, 255, 0);
+}
+#id_4 {
+  background-color: rgb(0, 0, 255);
+}
+#id_5 {
+  background-color: rgb(160, 160, 0);
+}
+#id_6 {
+  background-color: rgb(0, 160, 160);
+}
+#id_7 {
+  background-color: rgb(67, 67, 67);
+}
+#id_8 {
+  background-color: rgb(50, 50, 50);
+}
