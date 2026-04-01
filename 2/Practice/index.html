@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Важно для адаптивности: настраивает масштабирование на мобильных устройствах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap 5</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>#1</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col">Колонка 1</div>
+        <div class="col">Колонка 2</div>
+        <div class="col">Колонка 3</div>
+        <div class="col">Колонка 4</div>
+        <div class="col">Колонка 5</div>
+      </div>
+      <div class="row">
+        <div class="col">Колонка 1.1</div>
+        <div class="col">Колонка 1.2</div>
+      </div>
+      <div class="row">
+        <div class="col">Колонка 2.1</div>
+        <div class="col">Колонка 2.2</div>
+        <div class="col">Колонка 2.3</div>
+        <div class="col">Колонка 2.4</div>
+      </div>
+    </div>
+
+    <h1>#2</h1>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4">
+        <h3>Смартфон</h3>
+        &#128241;
+        <span>Цена 600$</span>
+        <button>Купить</button>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <h3>Гитара</h3>
+        &#127928;
+        <span>Цена 500$</span>
+        <button>Купить</button>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <h3>Наушники</h3>
+        &#127911;
+        <span>Цена 100$</span>
+        <button>Купить</button>
+      </div>
+    </div>
+
+    <h1>#3</h1>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
+      <div class="col bg-primary">1</div>
+      <div class="col bg-secondary">2</div>
+      <div class="col bg-success">3</div>
+      <div class="col bg-danger">4</div>
+      <div class="col bg-warning">5</div>
+      <div class="col bg-info">6</div>
+      <div class="col bg-light">7</div>
+      <div class="col bg-dark">8</div>
+    </div>
+
+    <h1>#4</h1>
+    <div class="row row-cols-5 g-2">
+      <div class="col bg-primary">1</div>
+      <div class="col bg-secondary">2</div>
+      <div class="col bg-success">3</div>
+      <div class="col bg-danger">4</div>
+      <div class="col bg-warning">5</div>
+      <div class="col bg-info">6</div>
+      <div class="col bg-light">7</div>
+    </div>
+
+    <h1>#5</h1>
+    <div class="row g-3">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-6 bg-info">Левая внутренняя колонка с текстом</div>
+          <div class="col-6 bg-danger">Правая внутренняя колонка с текстом</div>
+        </div>
+      </div>
+      <div class="col-md-4 bg-secondary">
+        «Кто рано встаёт — тому весь день спать хочется» <br />
+        &copy; Джейсон Стетхем
+      </div>
+    </div>
+
+    <h1>Самостоятельные задания</h1>
+    <h2>#1</h2>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-6">Колонка 1</div>
+      <div class="col-12 col-md-6 col-lg-1">Колонка 2</div>
+      <div class="col-12 col-md-6 col-lg-1">Колонка 3</div>
+      <div class="col-12 col-md-6 col-lg-1">Колонка 4</div>
+    </div>
+
+    <h2>#2</h2>
+    <div class="row row-cols-auto">
+      <div>Какой-то текст</div>
+      <div>Это какое-то сочетание слов</div>
+      <div>Слово</div>
+      <div>
+        Это длинное предложение не несущее никакого смысла и нужное только для
+        демонстрации работы row-cols-auto
+      </div>
+      <div>Два слова</div>
+    </div>
+
+    <h2>#3</h2>
+    <div
+      class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 gy-4 gx-3"
+    >
+      <div class="col">
+        <h3>Смартфон</h3>
+        &#128241;
+        <span>Цена 600$</span>
+        <button>Купить</button>
+      </div>
+      <div class="col">
+        <h3>Очки</h3>
+        &#128083;
+        <span>Цена 50$</span>
+        <button>Купить</button>
+      </div>
+      <div class="col">
+        <h3>Перчатки</h3>
+        &#129508;
+        <span>Цена 60$</span>
+        <button>Купить</button>
+      </div>
+      <div class="col">
+        <h3>Кроссовки</h3>
+        &#128095;
+        <span>Цена 100$</span>
+        <button>Купить</button>
+      </div>
+      <div class="col">
+        <h3>Туфли</h3>
+        &#128096;
+        <span>Цена 150$</span>
+        <button>Купить</button>
+      </div>
+      <div class="col">
+        <h3>Диплом бакалавра</h3>
+        &#127891;
+        <span>Цена 4 года жизни</span>
+        <button>Купить</button>
+      </div>
+      <div class="col">
+        <h3>Радио</h3>
+        &#128251;
+        <span>Цена 50$</span>
+        <button>Купить</button>
+      </div>
+      <div class="col">
+        <h3>Скрипка</h3>
+        &#127931;
+        <span>Цена 300$</span>
+        <button>Купить</button>
+      </div>
+      <div class="col">
+        <h3>Ноутбук</h3>
+        &#128187;
+        <span>Цена 1000$</span>
+        <button>Купить</button>
+      </div>
+      <div class="col">
+        <h3>Гитара</h3>
+        &#127928;
+        <span>Цена 500$</span>
+        <button>Купить</button>
+      </div>
+      <div class="col">
+        <h3>Фонарик</h3>
+        &#128294;
+        <span>Цена 15$</span>
+        <button>Купить</button>
+      </div>
+      <div class="col">
+        <h3>Фотоаппарат</h3>
+        &#128247;
+        <span>Цена 300$</span>
+        <button>Купить</button>
+      </div>
+      <div class="col">
+        <h3>Наушники</h3>
+        &#127911;
+        <span>Цена 100$</span>
+        <button>Купить</button>
+      </div>
+    </div>
+    <!-- Bootstrap JS (включает Popper для всплывающих подсказок и т.д.) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
