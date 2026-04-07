@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Важно для адаптивности: настраивает масштабирование на мобильных устройствах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Мой первый сайт на Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>#1</h1>
+    <h1 class="display-3">Coffee Like</h1>
+    <small class="text-muted">Работаем с 2010 года</small>
+    <p class="lead">Международная франшиза в формате <em>«кофе с собой»</em></p>
+    <p>
+      <mark>1 место</mark> Шеф-бариста Сети <strong>Юрий Фомин</strong> получил
+      <mark>Национальную премию</mark> <em>«Бариста года 2018»</em>
+    </p>
+    <ul class="list-unstyled">
+      <li>1000 кофе баров в нашей сети. Первые на рынке России.</li>
+      <li>Создали онлайн Академию для партнеров и их бариста.</li>
+      <li>
+        Запустили собственную обжарку кофейного зерна совместно с лидером рынка
+        – Tasty Coffee и его собственником Михаилом Шаровым.
+      </li>
+    </ul>
+    <figure>
+      <blockquote class="blockquote">
+        <p class="text-center">Главное – делать, но качественно</p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        Аяз Шабутдинов, основатель Coffee Like
+      </figcaption>
+    </figure>
+
+    <h1>#2</h1>
+    <div class="row">
+      <div class="col-md-4 p-3 text-primary bg-light">
+        <h4>Заголовок 1</h4>
+        <p>Абзац 1</p>
+        <a href="#" class="text-decoration-none">Подробнее</a>
+      </div>
+      <div class="col-md-4 p-3 text-success bg-dark">
+        <h4>Заголовок 2</h4>
+        <p>Абзац 2</p>
+        <a href="#" class="text-decoration-none">Подробнее</a>
+      </div>
+      <div class="col-md-4 p-3 text-white bg-primary">
+        <h4>Заголовок 3</h4>
+        <p>Абзац 3</p>
+        <a href="#" class="text-decoration-none">Подробнее</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 p-3 text-primary bg-light">
+        <h4>Заголовок 1</h4>
+        <p>Абзац 1</p>
+        <a href="#" class="text-decoration-none">Подробнее</a>
+      </div>
+      <div class="col-md-4 p-3 text-success bg-dark d-none">
+        <h4>Заголовок 2</h4>
+        <p>Абзац 2</p>
+        <a href="#" class="text-decoration-none">Подробнее</a>
+      </div>
+      <div class="col-md-4 p-3 text-white bg-primary">
+        <h4>Заголовок 3</h4>
+        <p>Абзац 3</p>
+        <a href="#" class="text-decoration-none">Подробнее</a>
+      </div>
+    </div>
+
+    <h1>#3</h1>
+    <div class="row row-cols-1 row-cols-md-3">
+      <div>
+        <div class="card bg-light mb-2" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Заголовок карточки</h5>
+            <p class="card-text">Текст карточки</p>
+            <a href="#" class="btn btn-primary">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card bg-dark text-light mb-2" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Заголовок карточки</h5>
+            <p class="card-text">Текст карточки</p>
+            <a href="#" class="card-link">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card bg-primary text-white mb-2" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Заголовок карточки</h5>
+            <p class="card-text">Текст карточки</p>
+            <a href="#" class="card-link">Элемент списка 1</a> <br />
+            <a href="#" class="card-link">Элемент списка 2</a> <br />
+            <a href="#" class="card-link">Элемент списка 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1>#4</h1>
+    <section>
+      <h1>Варианты кнопок</h1>
+      <div>
+        <h2>btn-*</h2>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+      </div>
+      <div>
+        <h2>btn-outline-*</h2>
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">
+          Secondary
+        </button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <button type="button" class="btn btn-outline-light">Light</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+        <button type="button" class="btn btn-outline-link">Link</button>
+      </div>
+      <div>
+        <h2>btn-(sm/lg)</h2>
+        <button type="button" class="btn btn-sm btn-primary">
+          Маленькая кнопка
+        </button>
+        <button type="button" class="btn btn-secondary">Обычная кнопка</button>
+        <button type="button" class="btn btn-lg btn-success">
+          Большая кнопка
+        </button>
+      </div>
+      <div>
+        <h2>.active/.disabled</h2>
+        <button type="button" class="btn active btn-warning">Warning</button>
+        <button type="button" class="btn disabled btn-info">Info</button>
+      </div>
+      <div>
+        <h2>w-100</h2>
+        <button type="button" class="btn w-100 btn-outline-dark">Dark</button>
+      </div>
+    </section>
+
+    <h1>#5</h1>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title mb-0">Вход на сайт</h5>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Введите email"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Пароль</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Введите пароль"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Войти</button>
+            </form>
+          </div>
+          <div class="card-footer text-muted text-center">
+            <small
+              >Нет аккаунта?
+              <a href="#" class="text-decoration-none"
+                >Зарегистрируйтесь</a
+              ></small
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-bottom pb-3 mb-3">
+          <div class="card-body">
+            <h5 class="card-title"><small>02.04.2026</small> Экология</h5>
+            <p class="card-text">
+              Студенты-экологи МАУ — участники крупного проекта по борьбе с
+              борщевиком
+            </p>
+          </div>
+        </div>
+        <div class="card border-bottom pb-3 mb-3">
+          <div class="card-body">
+            <h5 class="card-title"><small>02.04.2026</small> ИИ</h5>
+            <p class="card-text">
+              В МАУ обсудили применение ИИ и цифровых ресурсов в образовании лиц
+              с ОВЗ
+            </p>
+          </div>
+        </div>
+        <div class="card border-bottom pb-3 mb-3">
+          <div class="card-body">
+            <h5 class="card-title"><small>02.04.2026</small> Профориентация</h5>
+            <p class="card-text">
+              Представители МАУ — участники форума профориентационного проекта
+              «Больше чем работа»
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1>Самостоятельная работа</h1>
+
+    <h2>#1</h2>
+    <p>
+      <abbr
+        title="Глобальная навигационная спутниковая система"
+        class="initialism"
+        >ГЛОНАСС</abbr
+      >
+      - российская космическая система навигации, предназначенная для
+      оперативного определения местоположения, скорости движения и точного
+      времени наземных, морских, воздушных и космических объектов
+    </p>
+    <p>
+      Нажмите <kbd><kbd>alt</kbd> + <kbd>f4</kbd></kbd> чтобы сохранить файл
+    </p>
+
+    <h2>#2</h2>
+    <div class="row row-cols-md-3">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Посетители</h5>
+          <p class="card-text">
+            <span class="display-3">123</span> <br />
+            <span>Новых посетителей</span>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Продажи</h5>
+          <p class="card-text">
+            <span class="display-3">45</span> <br />
+            <span>Новых продаж</span>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Доход</h5>
+          <p class="card-text">
+            <span class="display-3">1500$</span><br />
+            <span>/мес</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2>#3</h2>
+    <h3>border</h3>
+    <div class="w-25 border">fgdg</div>
+  </body>
+</html>
