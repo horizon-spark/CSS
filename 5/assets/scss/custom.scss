@@ -1,0 +1,106 @@
+// 1. Сначала импортируем функции (обязательно!)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Переопределяем переменные ДО импорта variables
+$primary: #ff6b6b; // коралловый вместо синего
+$secondary: #4ecdc4; // бирюзовый вместо серого
+$success: #6b8c42; // темно-зеленый
+$body-bg: #f7f7f7; // светлый фон
+$body-color: #2d2d2d; // темно-серый текст
+$border-radius: 1rem; // более круглые углы
+$enable-shadows: true; // включить тени
+
+// 3. Импортируем переменные Bootstrap
+@import "../node_modules/bootstrap/scss/variables";
+
+// Создаем собственные утилиты с использованием функций Bootstrap
+.bg-primary-light {
+  background-color: tint-color($primary, 40%);
+}
+
+.bg-primary-dark {
+  background-color: shade-color($primary, 30%);
+}
+
+.text-contrast-test {
+  background-color: $primary;
+  color: color-contrast($primary);
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.text-contrast-test-dark {
+  background-color: $dark;
+  color: color-contrast($dark);
+  padding: 1rem;
+}
+
+// Переопределяем стандартные отступы
+$spacers: (
+  0: 0,
+  1: 0.5rem,
+  2: 1rem,
+  3: 2rem,
+  4: 3rem,
+  5: 5rem,
+  6: 8rem,
+  // добавляем новый отступ
+  7: 12rem, // и еще один
+);
+
+// Объединяем с существующей картой
+$spacers: map-merge(
+  $spacers,
+  (
+    6: 8rem,
+    7: 12rem,
+  )
+);
+
+// Создаем карту с новыми цветами
+$custom-colors: (
+  "purple": #9c27b0,
+  "orange": #ff9800,
+  "dark-blue": #0a3147,
+);
+
+// Объединяем с существующей картой
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// 4. Импортируем остальные обязательные файлы
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 5. Импортируем компоненты (выборочно)
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/card";
+
+// Создаем свою стилизацию кнопки на основе существующих классов
+.btn-3d {
+  @extend .btn;
+  @extend .btn-primary;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 0 shade-color($primary, 20%);
+  transition: all 0.1s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 shade-color($primary, 20%);
+  }
+
+  &:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 shade-color($primary, 20%);
+  }
+}
+
+// 6. Утилиты
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/utilities/api";
