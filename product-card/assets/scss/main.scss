@@ -1,0 +1,16 @@
+// Переопределяем переменные Bootstrap ДО импорта
+$primary: #2c3e8f;
+$secondary: #ff7e33;
+$border-radius: 1rem;
+
+// Импортируем весь Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Теперь импортируем кастомные стили (они дополняют Bootstrap)
+@import "variables";
+@import "global";
+@import "navbar";
+@import "cards";
+@import "popovers";
+@import "footer";
+@import "responsive";

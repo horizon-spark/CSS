@@ -1,0 +1,23 @@
+// Цветовая схема
+$custom-primary: #2c3e8f;
+$custom-primary-dark: #1e2a5e;
+$custom-secondary: #ff7e33;
+$custom-secondary-dark: #e05f1a;
+$custom-light-bg: #f8f9fc;
+$custom-card-border: rgba(0, 0, 0, 0.05);
+
+// Тени
+$custom-box-shadow:
+  0 10px 20px rgba(0, 0, 0, 0.03),
+  0 6px 6px rgba(0, 0, 0, 0.05);
+$custom-hover-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.15);
+
+// Шрифты
+$font-family-base:
+  "Segoe UI",
+  Roboto,
+  system-ui,
+  -apple-system,
+  "Helvetica Neue",
+  sans-serif;
+$text-color: #1f2a44;

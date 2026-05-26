@@ -1,0 +1,32 @@
+// Обязательные файлы
+@import "../node_modules/bootstrap/scss/functions";
+
+// Переменные
+$primary: #ff6b6b;
+$secondary: #4ecdc4;
+// ... остальные переменные
+
+@import "../node_modules/bootstrap/scss/variables";
+
+// Карты
+$custom-colors: (
+  "purple": #9c27b0,
+  "orange": #ff9800,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// Только нужные компоненты
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/card";
+
+// Утилиты (обязательно в конце)
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/utilities/api";

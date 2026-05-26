@@ -1,0 +1,66 @@
+.popover-control-panel {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+
+  h5 {
+    margin-bottom: 0.75rem;
+    color: $custom-primary;
+    font-weight: 600;
+
+    i {
+      color: #ffc107;
+    }
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+}
+
+.btn-outline-accent {
+  border-color: $custom-primary;
+  color: $custom-primary;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $custom-primary;
+    color: white;
+    border-color: $custom-primary;
+  }
+}
+
+// Стили для алертов
+.alert-info {
+  background-color: #e3f2fd;
+  border-color: #b8daff;
+  color: #004085;
+
+  code {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+  }
+}
+
+// Кастомные стили для поповеров
+.popover {
+  max-width: 300px;
+
+  &-header {
+    background: $custom-primary;
+    color: white;
+    font-weight: 600;
+  }
+
+  &-body {
+    font-size: 0.9rem;
+
+    strong {
+      color: $custom-primary;
+    }
+  }
+}

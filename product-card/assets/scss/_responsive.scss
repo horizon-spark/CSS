@@ -1,0 +1,68 @@
+// Планшеты
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 170px;
+  }
+
+  .price {
+    font-size: 1.3rem;
+  }
+
+  .page-header {
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+
+  .popover-control-panel {
+    .d-flex {
+      flex-direction: column;
+      align-items: flex-start !important;
+
+      .d-flex {
+        margin-top: 1rem;
+        width: 100%;
+
+        button {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+// Мобильные устройства
+@media (max-width: 576px) {
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .btn-custom-primary {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.875rem;
+  }
+
+  .icon-action {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
+
+  .social-icon {
+    font-size: 1.2rem;
+    margin-right: 0.75rem;
+  }
+}
+
+// Десктопы с большим экраном
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .card-img-top {
+    height: 220px;
+  }
+}

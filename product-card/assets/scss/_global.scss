@@ -1,0 +1,50 @@
+body {
+  background: $custom-light-bg;
+  font-family: $font-family-base;
+  color: $text-color;
+}
+
+.page-header {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+
+  h1 {
+    font-weight: 700;
+    background: linear-gradient(120deg, #1e2f5e, #2c3e8f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: $custom-secondary;
+    border-radius: 4px;
+  }
+
+  p {
+    margin-top: 0.5rem;
+  }
+}
+
+.text-primary-custom {
+  color: $custom-primary;
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 240, 0.4);
+  color: #f8f9fa;
+
+  &:hover {
+    background-color: $custom-secondary;
+    border-color: $custom-secondary;
+    color: white;
+  }
+}

@@ -1,0 +1,64 @@
+// Обязательные файлы
+@import "../../node_modules/bootstrap/scss/functions";
+
+// Переменные
+$primary: #ff6b6b;
+$secondary: #4ecdc4;
+$navbar-light-bg: #ecacac;
+$card-spacer-x: 20px;
+$card-spacer-y: 20px;
+$modal-content-border-radius: 5px;
+// ... остальные переменные
+
+@import "../../node_modules/bootstrap/scss/variables";
+
+// Карты
+$theme-colors: map-remove($theme-colors, "info", "warning", "light");
+
+$custom-colors: (
+  "brand-primary": #9c27b0,
+  "brand-accent": #e46013,
+  "brand-soft": #92e6e0,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+
+// Только нужные компоненты
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/card";
+
+.custom-card {
+  @extend .card;
+  box-shadow: 0 4px 0 shade-color($primary, 20%);
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+.custom-button {
+  @extend .btn;
+  @extend .btn-primary;
+  border-radius: 20px;
+}
+
+@mixin responsive-text($min-width, $size) {
+  @media (min-width: $min-width) {
+    font-size: $size;
+  }
+}
+
+.custom-header {
+  @extend .h1;
+  @include responsive-text(768px, 2rem);
+  @include responsive-text(992px, 2.2rem);
+  @include responsive-text(1200px, 2.4rem);
+}
+
+// Утилиты (обязательно в конце)
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/utilities/api";
