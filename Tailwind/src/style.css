@@ -2,4 +2,7 @@
 @theme {
   --color-brand: #6366f1;
   --breakpoint-md: 700px;
+
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
 }

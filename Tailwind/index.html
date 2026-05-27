@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>7</title>
+  </head>
+  <body>
+    <!-- Лабораторная работа 7 -->
+    <h1 class="text-3xl font-bold underline text-blue-600">Hello world!</h1>
+    <p class="text-brand">text-brand</p>
+    <p class="md:text-lg">md:text-lg</p>
+
+    <!-- Лабораторная работа 8 -->
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-4 md:gap-6 lg:gap-8"
+    >
+      <div
+        class="p-6 bg-white rounded-lg shadow-md w-full max-w-sm mx-auto hover:shadow-lg transition-shadow duration-300"
+      >
+        <h3 class="text-xl font-semibold mb-2 pb-2 border-b">Заголовок 1</h3>
+        <p class="text-gray-600 text-sm md:text-base lg:text-lg">Параграф 1</p>
+        <button
+          class="block w-full md:w-auto text-center bg-primary hover:bg-primary-hover text-white font-medium py-2 px-4 rounded"
+        >
+          Кнопка 1
+        </button>
+        <a
+          href="#"
+          class="focus:outline-none focus:ring-2 focus:ring-primary/50"
+          >Ссылка 1</a
+        >
+      </div>
+      <div
+        class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+      >
+        <h3 class="text-xl font-semibold mb-2">Заголовок 2</h3>
+        <p class="text-gray-600 text-sm md:text-base lg:text-lg">Параграф 2</p>
+        <button
+          class="block w-full md:w-auto text-center bg-primary hover:bg-primary-hover text-white font-medium py-2 px-4 rounded"
+        >
+          Кнопка 2
+        </button>
+        <a
+          href="#"
+          class="focus:outline-none focus:ring-2 focus:ring-primary/50"
+          >Ссылка 2</a
+        >
+      </div>
+      <div
+        class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+      >
+        <h3 class="text-xl font-semibold mb-2">Заголовок 3</h3>
+        <p class="text-gray-600 text-sm md:text-base lg:text-lg">Параграф 3</p>
+        <button
+          class="block w-full md:w-auto text-center bg-primary hover:bg-primary-hover text-white font-medium py-2 px-4 rounded"
+        >
+          Кнопка 3
+        </button>
+        <a
+          href="#"
+          class="focus:outline-none focus:ring-2 focus:ring-primary/50"
+          >Ссылка 3</a
+        >
+      </div>
+    </div>
+
+    <!-- Самостоятельные задания для лабораторной работы 8 -->
+    <h3 class="text-center text-xl mt-4">Самостоятельные задания</h3>
+    <h3 class="text-center text-lg mt-2">1. Навбар</h3>
+    <div class="flex flex-col text-center md:flex-row gap-4 md:gap-6 lg:gap-8">
+      <a href="#">О сайте</a><a href="#">Контакты</a><a href="#">Главная</a>
+    </div>
+
+    <h3 class="text-center text-lg mt-2">2. Галерея</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 auto-rows-[250px]">
+      <!-- Элемент галереи 1 -->
+      <div
+        class="gallery-item col-span-1 row-span-1 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+      >
+        <img
+          src="https://picsum.photos/id/1015/600/400"
+          alt="Пейзаж с горами"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Элемент галереи 2 -->
+      <div
+        class="gallery-item col-span-1 row-span-1 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+      >
+        <img
+          src="https://picsum.photos/id/104/600/400"
+          alt="Река и лес"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Элемент галереи 3 - более высокий -->
+      <div
+        class="gallery-item col-span-1 row-span-2 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+      >
+        <img
+          src="https://picsum.photos/id/15/600/800"
+          alt="Водопад"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Элемент галереи 4 -->
+      <div
+        class="gallery-item col-span-1 row-span-1 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+      >
+        <img
+          src="https://picsum.photos/id/169/600/400"
+          alt="Пустыня"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Элемент галереи 5 - широкий -->
+      <div
+        class="gallery-item col-span-2 row-span-1 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+      >
+        <img
+          src="https://picsum.photos/id/116/1200/400"
+          alt="Озеро"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Элемент галереи 6 -->
+      <div
+        class="gallery-item col-span-1 row-span-1 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+      >
+        <img
+          src="https://picsum.photos/id/155/600/400"
+          alt="Город"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+
+    <h3 class="text-center text-lg mt-2">3. Форма</h3>
+    <form action="" method="get">
+      <input
+        class="border-red-500 focus:ring-red-200"
+        placeholder="Поле с ошибкой"
+      />
+      <input
+        class="border-green-500 focus:ring-green-200"
+        placeholder="Поле с успехом"
+      />
+    </form>
+  </body>
+</html>
