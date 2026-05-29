@@ -1,0 +1,56 @@
+.btn {
+  @apply px-5 py-2.5 rounded-lg font-medium transition-colors duration-200;
+}
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary-hover;
+  background-color: #3b82f6;
+  color: white;
+}
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+  background-color: #6b7280;
+  color: white;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow;
+}
+
+.section-title {
+  @apply text-center font-bold text-xl mt-4;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg;
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  @apply disabled:bg-gray-100 disabled:cursor-not-allowed disabled:text-gray-500;
+  @apply placeholder:text-gray-400;
+}
+
+.nav-link {
+  @apply px-4 py-2 text-gray-600 font-medium transition-all duration-200;
+  @apply hover:text-blue-600 hover:underline hover:underline-offset-4;
+  @apply focus:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.nav-link.active {
+  @apply text-blue-600 underline underline-offset-4;
+}
+
+.alert {
+  @apply relative w-full p-4 mb-4 rounded-lg border-l-4;
+  @apply transition-all duration-300 ease-in-out;
+  @apply flex items-start gap-3 shadow-sm;
+}
+
+.alert-success {
+  @apply bg-green-50 border-green-500 text-green-800;
+}
+
+.alert-error {
+  @apply bg-red-50 border-red-500 text-red-800;
+}
+
+.alert-warning {
+  @apply bg-yellow-50 border-yellow-500 text-yellow-800;
+}
