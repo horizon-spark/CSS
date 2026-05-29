@@ -1,8 +1,113 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --gradient-primary: linear-gradient(to right, #4f46e5, #7c3aed);
+}
+
 @theme {
   --color-brand: #6366f1;
   --breakpoint-md: 700px;
 
-  --color-primary: #3b82f6;
-  --color-primary-hover: #2563eb;
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-secondary: #64748b;
+  --color-accent: #f59e0b;
+
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --text-display: 3rem;
+  --text-display--line-height: 1.2;
+
+  --breakpoint-mobile: 480px;
+  --breakpoint-desktop: 1280px;
+}
+
+@utility card {
+  @apply p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow;
+}
+
+@utility btn-primary {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 150ms;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #2563eb;
+  }
+
+  &:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: #93c5fd;
+    ring-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@utility btn-secondary {
+  background-color: #6b7280;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 150ms;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #4b5563;
+  }
+
+  &:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: #cbd5e1;
+    ring-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@utility btn-outline {
+  background-color: transparent;
+  color: #3b82f6;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3b82f6;
+  transition: all 150ms;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #eff6ff;
+  }
+
+  &:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: #93c5fd;
+    ring-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@utility bg-gradient-primary {
+  background-image: var(--gradient-primary);
+  padding: 1vh;
 }
