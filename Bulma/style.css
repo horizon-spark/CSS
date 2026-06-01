@@ -1,0 +1,142 @@
+/* ========================================
+   МИНИМАЛИСТИЧНЫЕ СТИЛИ ДЛЯ BULMA
+   ======================================== */
+
+/* Базовые переменные */
+:root {
+  --bulma-primary-h: 240;
+  --bulma-primary-s: 60%;
+  --bulma-primary-l: 50%;
+  --bulma-primary: hsl(
+    var(--bulma-primary-h),
+    var(--bulma-primary-s),
+    var(--bulma-primary-l)
+  );
+}
+
+/* Плавная прокрутка */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Анимация появления карточек */
+.fade-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.fade-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover эффект для карточек */
+.card.is-hovered {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card.is-hovered:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для активных полей формы */
+.input.is-success,
+.textarea.is-success {
+  border-color: #00b894;
+}
+
+.input.is-danger,
+.textarea.is-danger {
+  border-color: #ff7675;
+}
+
+.help.is-success {
+  color: #00b894;
+}
+
+.help.is-danger {
+  color: #ff7675;
+}
+
+/* ========================================
+   ТЁМНАЯ ТЕМА через Bulma переменные
+   ======================================== */
+[data-theme="dark"] {
+  --bulma-scheme-h: 240;
+  --bulma-scheme-s: 8%;
+  --bulma-scheme-invert-l: 12%;
+  --bulma-body-background-color: #1a1a2e;
+  --bulma-body-color: #e0e0e0;
+  --bulma-background: #0f0f1a;
+}
+
+[data-theme="dark"] .card {
+  background-color: #16213e;
+}
+
+[data-theme="dark"] .input,
+[data-theme="dark"] .textarea {
+  background-color: #0f0f1a;
+  border-color: #2d2d3a;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .input:focus,
+[data-theme="dark"] .textarea:focus {
+  border-color: var(--bulma-primary);
+  box-shadow: 0 0 0 0.125em rgba(108, 92, 231, 0.25);
+}
+
+[data-theme="dark"] .navbar {
+  background-color: #16213e;
+}
+
+[data-theme="dark"] .navbar-item {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .navbar-item:hover {
+  background-color: rgba(108, 92, 231, 0.1);
+}
+
+[data-theme="dark"] footer {
+  background-color: #16213e;
+  border-top-color: #2d2d3a;
+}
+
+[data-theme="dark"] .button.is-light {
+  background-color: #2d2d3a;
+  color: #e0e0e0;
+}
+
+/* Переключатель темы */
+.theme-switch {
+  cursor: pointer;
+  padding: 0 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.theme-switch:hover {
+  opacity: 0.7;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .navbar-item span:not(.icon) {
+    display: inline;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .title.is-1 {
+    font-size: 2rem;
+  }
+}

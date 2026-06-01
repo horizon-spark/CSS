@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyBulma — Минималистичное портфолио</title>
+    <!-- Bulma CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Кастомные стили -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ==================== NAVBAR (Задание 1) ==================== -->
+    <nav class="navbar is-fixed-top" role="navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <i class="fas fa-code"></i>
+          <strong style="margin-left: 8px">MyBulma</strong>
+        </a>
+        <button class="navbar-burger" data-target="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#home">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span>Главная</span>
+          </a>
+          <a class="navbar-item" href="#projects">
+            <span class="icon"><i class="fas fa-th"></i></span>
+            <span>Проекты</span>
+          </a>
+          <a class="navbar-item" href="#contact">
+            <span class="icon"><i class="fas fa-envelope"></i></span>
+            <span>Контакты</span>
+          </a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="theme-switch" id="themeSwitch">
+              <span class="icon"><i class="fas fa-moon"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==================== HOME ==================== -->
+    <section id="home" class="section">
+      <div class="container has-text-centered">
+        <h1 class="title is-1">MyBulma</h1>
+        <p class="subtitle is-4">Минималистичное портфолио</p>
+        <a href="#projects" class="button is-primary">
+          <span class="icon"><i class="fas fa-arrow-down"></i></span>
+          <span>Смотреть проекты</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS (Задание 2) ==================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered mb-5">Проекты</h2>
+        <div class="columns is-multiline">
+          <!-- Проект 1 -->
+          <div class="column is-one-third-desktop is-half-tablet">
+            <div class="card is-hovered fade-item">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img
+                    src="https://picsum.photos/id/1/400/300"
+                    alt="Проект 1"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+              <div class="card-content">
+                <h3 class="title is-5">Аналитическая платформа</h3>
+                <p class="content">
+                  Интерактивные дашборды и отчеты для бизнеса.
+                </p>
+                <div class="buttons">
+                  <button class="button is-small is-primary">
+                    <span class="icon"><i class="fas fa-eye"></i></span>
+                    <span>Детали</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Проект 2 -->
+          <div class="column is-one-third-desktop is-half-tablet">
+            <div class="card is-hovered fade-item">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img
+                    src="https://picsum.photos/id/20/400/300"
+                    alt="Проект 2"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+              <div class="card-content">
+                <h3 class="title is-5">Мобильное приложение</h3>
+                <p class="content">Фитнес-трекер с интеграцией умных часов.</p>
+                <div class="buttons">
+                  <button class="button is-small is-primary">
+                    <span class="icon"><i class="fas fa-eye"></i></span>
+                    <span>Детали</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Проект 3 -->
+          <div class="column is-one-third-desktop is-half-tablet">
+            <div class="card is-hovered fade-item">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img
+                    src="https://picsum.photos/id/26/400/300"
+                    alt="Проект 3"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+              <div class="card-content">
+                <h3 class="title is-5">CRM система</h3>
+                <p class="content">
+                  Управление клиентами и автоматизация продаж.
+                </p>
+                <div class="buttons">
+                  <button class="button is-small is-primary">
+                    <span class="icon"><i class="fas fa-eye"></i></span>
+                    <span>Детали</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT FORM (Задание 3) ==================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered mb-5">Свяжитесь с нами</h2>
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <form id="contactForm">
+              <!-- Имя -->
+              <div class="field" id="nameField">
+                <label class="label">Имя *</label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="text"
+                    id="name"
+                    placeholder="Ваше имя"
+                  />
+                </div>
+                <p class="help" id="nameHelp">Минимум 2 символа</p>
+              </div>
+              <!-- Email -->
+              <div class="field" id="emailField">
+                <label class="label">Email *</label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="email"
+                    id="email"
+                    placeholder="mail@example.com"
+                  />
+                </div>
+                <p class="help" id="emailHelp">Введите корректный email</p>
+              </div>
+              <!-- Сообщение -->
+              <div class="field" id="messageField">
+                <label class="label">Сообщение *</label>
+                <div class="control">
+                  <textarea
+                    class="textarea"
+                    id="message"
+                    rows="4"
+                    placeholder="Ваше сообщение"
+                  ></textarea>
+                </div>
+                <p class="help" id="messageHelp">Минимум 10 символов</p>
+              </div>
+              <!-- Кнопки -->
+              <div class="field is-grouped">
+                <div class="control">
+                  <button type="submit" class="button is-primary">
+                    <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                    <span>Отправить</span>
+                  </button>
+                </div>
+                <div class="control">
+                  <button type="reset" class="button is-light" id="resetBtn">
+                    <span class="icon"><i class="fas fa-undo"></i></span>
+                    <span>Очистить</span>
+                  </button>
+                </div>
+              </div>
+              <div id="formResult" class="mt-4"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="has-text-centered py-4">
+      <p>© 2026 MyBulma — Минималистичное портфолио</p>
+    </footer>
+
+    <script>
+      // ==================== ГАМБУРГЕР ====================
+      document
+        .querySelector(".navbar-burger")
+        ?.addEventListener("click", () => {
+          document
+            .querySelector(".navbar-burger")
+            .classList.toggle("is-active");
+          document.querySelector("#navMenu").classList.toggle("is-active");
+        });
+
+      // ==================== ПЛАВНАЯ ПРОКРУТКА ====================
+      document.querySelectorAll('.navbar-item[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) target.scrollIntoView({ behavior: "smooth" });
+          // Закрываем мобильное меню
+          document
+            .querySelector(".navbar-burger")
+            ?.classList.remove("is-active");
+          document.querySelector("#navMenu")?.classList.remove("is-active");
+        });
+      });
+
+      // ==================== АНИМАЦИЯ ПРИ ПРОКРУТКЕ ====================
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      document
+        .querySelectorAll(".fade-item")
+        .forEach((el) => observer.observe(el));
+
+      // ==================== ТЁМНАЯ ТЕМА ====================
+      const themeSwitch = document.getElementById("themeSwitch");
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+        themeSwitch.innerHTML =
+          '<span class="icon"><i class="fas fa-sun"></i></span>';
+      }
+      themeSwitch.addEventListener("click", () => {
+        const isDark = document.documentElement.hasAttribute("data-theme");
+        if (isDark) {
+          document.documentElement.removeAttribute("data-theme");
+          localStorage.setItem("theme", "light");
+          themeSwitch.innerHTML =
+            '<span class="icon"><i class="fas fa-moon"></i></span>';
+        } else {
+          document.documentElement.setAttribute("data-theme", "dark");
+          localStorage.setItem("theme", "dark");
+          themeSwitch.innerHTML =
+            '<span class="icon"><i class="fas fa-sun"></i></span>';
+        }
+      });
+
+      // ==================== ВАЛИДАЦИЯ ФОРМЫ ====================
+      const form = document.getElementById("contactForm");
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const messageInput = document.getElementById("message");
+      const resultDiv = document.getElementById("formResult");
+
+      function setStatus(fieldId, isValid, msg, successMsg) {
+        const field = document.getElementById(fieldId);
+        const input = field.querySelector(".input, .textarea");
+        const help = field.querySelector(".help");
+        if (isValid) {
+          input.classList.remove("is-danger");
+          input.classList.add("is-success");
+          help.classList.remove("is-danger");
+          help.classList.add("is-success");
+          help.textContent = successMsg || msg;
+        } else {
+          input.classList.remove("is-success");
+          input.classList.add("is-danger");
+          help.classList.remove("is-success");
+          help.classList.add("is-danger");
+          help.textContent = msg;
+        }
+      }
+
+      function resetStatus() {
+        ["nameField", "emailField", "messageField"].forEach((fieldId) => {
+          const field = document.getElementById(fieldId);
+          const input = field.querySelector(".input, .textarea");
+          const help = field.querySelector(".help");
+          input.classList.remove("is-success", "is-danger");
+          help.classList.remove("is-success", "is-danger");
+        });
+      }
+
+      function validate() {
+        let valid = true;
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const message = messageInput.value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (name.length < 2) {
+          setStatus("nameField", false, "Имя: минимум 2 символа", "");
+          valid = false;
+        } else {
+          setStatus("nameField", true, "", "✓ Отлично");
+        }
+
+        if (!emailPattern.test(email)) {
+          setStatus("emailField", false, "Введите корректный email", "");
+          valid = false;
+        } else {
+          setStatus("emailField", true, "", "✓ Отлично");
+        }
+
+        if (message.length < 10) {
+          setStatus(
+            "messageField",
+            false,
+            "Сообщение: минимум 10 символов",
+            "",
+          );
+          valid = false;
+        } else {
+          setStatus("messageField", true, "", "✓ Отлично");
+        }
+
+        return valid;
+      }
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (validate()) {
+          resultDiv.innerHTML =
+            '<div class="notification is-success"><i class="fas fa-check"></i> Сообщение отправлено!</div>';
+          form.reset();
+          resetStatus();
+          setTimeout(() => (resultDiv.innerHTML = ""), 3000);
+        } else {
+          resultDiv.innerHTML =
+            '<div class="notification is-danger"><i class="fas fa-exclamation"></i> Заполните все поля правильно</div>';
+        }
+      });
+
+      document.getElementById("resetBtn").addEventListener("click", () => {
+        resetStatus();
+        resultDiv.innerHTML = "";
+      });
+    </script>
+  </body>
+</html>
