@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="ru" class="no-js" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Админ-панель — Дашборд</title>
+    <!-- Foundation CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.9.0/dist/css/foundation.min.css"
+    />
+    <!-- Кастомные стили -->
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <!-- Off-Canvas мобильное меню -->
+    <div class="off-canvas-wrapper">
+      <div
+        class="off-canvas position-left"
+        id="mobile-menu"
+        data-off-canvas
+        data-transition="push"
+      >
+        <button
+          class="close-button"
+          aria-label="Закрыть меню"
+          type="button"
+          data-close
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div style="padding: 1rem">
+          <h5
+            style="
+              color: var(--text-color);
+              font-weight: 700;
+              margin-bottom: 1rem;
+            "
+          >
+            🚀 Дашборд
+          </h5>
+          <ul class="vertical menu">
+            <li class="is-active"><a href="#">📊 Дашборд</a></li>
+            <li><a href="#">👥 Пользователи</a></li>
+            <li><a href="#">📦 Заказы</a></li>
+            <li><a href="#">📈 Отчёты</a></li>
+            <li><a href="#">⚙️ Настройки</a></li>
+            <li><a href="#">🔒 Безопасность</a></li>
+            <li><a href="#">📚 Документация</a></li>
+          </ul>
+          <hr style="border-color: var(--border-light)" />
+          <button
+            class="theme-btn"
+            id="themeToggleMobile"
+            style="
+              width: 100%;
+              color: var(--text-color);
+              border-color: var(--border-color);
+            "
+          >
+            🌙 Тёмная тема
+          </button>
+        </div>
+      </div>
+
+      <div class="off-canvas-content" data-off-canvas-content>
+        <!-- Основной вертикальный контейнер -->
+        <div class="grid-y medium-grid-frame" style="height: 100vh">
+          <!-- Хедер -->
+          <div class="cell shrink">
+            <div class="top-bar">
+              <div
+                class="top-bar-left"
+                style="display: flex; align-items: center; gap: 0.75rem"
+              >
+                <!-- Кнопка мобильного меню -->
+                <button
+                  class="menu-icon hide-for-medium"
+                  type="button"
+                  data-toggle="mobile-menu"
+                ></button>
+
+                <span class="menu-text">🚀 Дашборд</span>
+
+                <ul
+                  class="dropdown menu show-for-medium"
+                  data-dropdown-menu
+                  style="margin-left: 0.5rem"
+                >
+                  <li><a href="#">Главная</a></li>
+                  <li>
+                    <a href="#">Аналитика</a>
+                    <ul class="menu vertical">
+                      <li><a href="#">Продажи</a></li>
+                      <li><a href="#">Посещаемость</a></li>
+                      <li><a href="#">Конверсия</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Управление</a>
+                    <ul class="menu vertical">
+                      <li><a href="#">Пользователи</a></li>
+                      <li><a href="#">Заказы</a></li>
+                      <li><a href="#">Товары</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Отчёты</a></li>
+                </ul>
+              </div>
+
+              <!-- Правая часть: поиск + тема в одной строке -->
+              <div class="header-actions">
+                <div class="search-box show-for-medium">
+                  <input type="search" placeholder="Поиск по системе..." />
+                  <button class="search-btn" type="button">🔍</button>
+                </div>
+                <button
+                  class="theme-btn show-for-medium"
+                  id="themeToggle"
+                  title="Переключить тему"
+                >
+                  🌙
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Основная область -->
+          <div class="cell auto medium-cell-block-container">
+            <div class="grid-x grid-padding-x" style="height: 100%">
+              <!-- Боковая панель (десктоп) -->
+              <div
+                class="cell medium-3 large-2 medium-cell-block-y scrollable-sidebar sidebar show-for-medium"
+              >
+                <h5>Навигация</h5>
+                <ul class="vertical menu" data-accordion-menu>
+                  <li class="is-active"><a href="#">📊 Дашборд</a></li>
+                  <li>
+                    <a href="#">👥 Пользователи</a>
+                    <ul class="menu vertical nested">
+                      <li><a href="#">Все пользователи</a></li>
+                      <li><a href="#">Администраторы</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">📦 Заказы</a>
+                    <ul class="menu vertical nested">
+                      <li><a href="#">Новые</a></li>
+                      <li><a href="#">В обработке</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">📈 Отчёты</a></li>
+                  <li><a href="#">⚙️ Настройки</a></li>
+                  <li><a href="#">📚 Документация</a></li>
+                </ul>
+                <hr />
+                <h5>Уведомления</h5>
+                <div class="callout small success">
+                  <p style="font-size: 0.85rem; margin: 0">
+                    <strong>3 новых заказа</strong><br />Требуют обработки
+                  </p>
+                </div>
+                <div class="callout small warning" style="margin-top: 0.5rem">
+                  <p style="font-size: 0.85rem; margin: 0">
+                    <strong>Обновление системы</strong><br />Запланировано на
+                    завтра
+                  </p>
+                </div>
+              </div>
+
+              <!-- Основной контент -->
+              <div
+                class="cell medium-9 large-10 medium-cell-block-y scrollable-content main-content"
+              >
+                <h2 class="section-title">📊 Дашборд</h2>
+
+                <!-- КАРТОЧКИ СТАТИСТИКИ -->
+                <div class="statistics-cards">
+                  <div class="grid-x grid-padding-x small-up-1 medium-up-2">
+                    <!-- Карточка 1: Выручка -->
+                    <div class="cell">
+                      <div class="card stat-card revenue">
+                        <div class="card-section">
+                          <div class="stat-header">
+                            <div>
+                              <div class="stat-icon">💰</div>
+                              <div class="stat-title">Выручка</div>
+                            </div>
+                          </div>
+                          <div class="stat-value">₽892,420</div>
+                          <div class="stat-trend positive">
+                            <span class="trend-arrow">▲</span>
+                            <span>+12.5% за месяц</span>
+                          </div>
+                          <div style="margin-top: 1rem">
+                            <div
+                              class="progress"
+                              role="progressbar"
+                              tabindex="0"
+                              aria-valuenow="85"
+                              aria-valuemin="0"
+                              aria-valuetext="85 процентов от плана"
+                              aria-valuemax="100"
+                            >
+                              <div
+                                class="progress-meter"
+                                style="
+                                  width: 85%;
+                                  background: linear-gradient(
+                                    90deg,
+                                    #43e97b,
+                                    #38f9d7
+                                  );
+                                "
+                              ></div>
+                            </div>
+                            <small style="color: var(--text-light)"
+                              >85% от месячного плана</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Карточка 2: Пользователи -->
+                    <div class="cell">
+                      <div class="card stat-card users">
+                        <div class="card-section">
+                          <div class="stat-header">
+                            <div>
+                              <div class="stat-icon">👥</div>
+                              <div class="stat-title">Пользователи</div>
+                            </div>
+                          </div>
+                          <div class="stat-value">2,845</div>
+                          <div class="stat-trend positive">
+                            <span class="trend-arrow">▲</span>
+                            <span>+234 сегодня</span>
+                          </div>
+                          <div style="margin-top: 1rem">
+                            <div
+                              class="progress"
+                              role="progressbar"
+                              tabindex="0"
+                              aria-valuenow="72"
+                              aria-valuemin="0"
+                              aria-valuetext="72 процента"
+                              aria-valuemax="100"
+                            >
+                              <div
+                                class="progress-meter"
+                                style="
+                                  width: 72%;
+                                  background: linear-gradient(
+                                    90deg,
+                                    #667eea,
+                                    #764ba2
+                                  );
+                                "
+                              ></div>
+                            </div>
+                            <small style="color: var(--text-light)"
+                              >72% активных пользователей</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Карточка 3: Заказы -->
+                    <div class="cell">
+                      <div class="card stat-card orders">
+                        <div class="card-section">
+                          <div class="stat-header">
+                            <div>
+                              <div class="stat-icon">📦</div>
+                              <div class="stat-title">Заказы</div>
+                            </div>
+                          </div>
+                          <div class="stat-value">1,247</div>
+                          <div class="stat-trend negative">
+                            <span class="trend-arrow">▼</span>
+                            <span>-3.2% к вчера</span>
+                          </div>
+                          <div style="margin-top: 1rem">
+                            <div
+                              class="progress"
+                              role="progressbar"
+                              tabindex="0"
+                              aria-valuenow="94"
+                              aria-valuemin="0"
+                              aria-valuetext="94 процента"
+                              aria-valuemax="100"
+                            >
+                              <div
+                                class="progress-meter"
+                                style="
+                                  width: 94%;
+                                  background: linear-gradient(
+                                    90deg,
+                                    #f093fb,
+                                    #f5576c
+                                  );
+                                "
+                              ></div>
+                            </div>
+                            <small style="color: var(--text-light)"
+                              >94% выполнено</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Карточка 4: Конверсия -->
+                    <div class="cell">
+                      <div class="card stat-card conversion">
+                        <div class="card-section">
+                          <div class="stat-header">
+                            <div>
+                              <div class="stat-icon">📈</div>
+                              <div class="stat-title">Конверсия</div>
+                            </div>
+                          </div>
+                          <div class="stat-value">3.24%</div>
+                          <div class="stat-trend positive">
+                            <span class="trend-arrow">▲</span>
+                            <span>+0.5% к среднему</span>
+                          </div>
+                          <div style="margin-top: 1rem">
+                            <div
+                              class="progress"
+                              role="progressbar"
+                              tabindex="0"
+                              aria-valuenow="65"
+                              aria-valuemin="0"
+                              aria-valuetext="65 процентов"
+                              aria-valuemax="100"
+                            >
+                              <div
+                                class="progress-meter"
+                                style="
+                                  width: 65%;
+                                  background: linear-gradient(
+                                    90deg,
+                                    #4facfe,
+                                    #00f2fe
+                                  );
+                                "
+                              ></div>
+                            </div>
+                            <small style="color: var(--text-light)"
+                              >Цель: 5%</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- КАРУСЕЛЬ ORBIT -->
+                <h3>📈 Визуализация данных</h3>
+                <div
+                  class="orbit"
+                  role="region"
+                  aria-label="Графики и баннеры"
+                  data-orbit
+                >
+                  <div class="orbit-wrapper">
+                    <div class="orbit-controls">
+                      <button class="orbit-previous">
+                        <span class="show-for-sr">Предыдущий</span>&#9664;
+                      </button>
+                      <button class="orbit-next">
+                        <span class="show-for-sr">Следующий</span>&#9654;
+                      </button>
+                    </div>
+                    <ul class="orbit-container">
+                      <li class="is-active orbit-slide slide-graph-1">
+                        <div style="text-align: center">
+                          <h2>📊 График продаж</h2>
+                          <div
+                            style="
+                              font-size: 3rem;
+                              font-weight: bold;
+                              margin: 1rem 0;
+                            "
+                          >
+                            +24.5%
+                          </div>
+                          <p>Рост по сравнению с прошлым месяцем</p>
+                        </div>
+                      </li>
+                      <li class="orbit-slide slide-graph-2">
+                        <div style="text-align: center">
+                          <h2>👥 Активность пользователей</h2>
+                          <div
+                            style="
+                              font-size: 3rem;
+                              font-weight: bold;
+                              margin: 1rem 0;
+                            "
+                          >
+                            2.8K
+                          </div>
+                          <p>Удержание: 87%</p>
+                        </div>
+                      </li>
+                      <li class="orbit-slide slide-graph-3">
+                        <div style="text-align: center">
+                          <h2>💰 Финансовые показатели</h2>
+                          <div
+                            style="
+                              font-size: 3rem;
+                              font-weight: bold;
+                              margin: 1rem 0;
+                            "
+                          >
+                            ₽1.2M
+                          </div>
+                          <p>Общая выручка за месяц</p>
+                        </div>
+                      </li>
+                      <li class="orbit-slide slide-banner">
+                        <div style="text-align: center">
+                          <h2>🎉 Специальное предложение!</h2>
+                          <p style="font-size: 1.5rem">
+                            Обновление до Premium — скидка 30%
+                          </p>
+                          <a
+                            href="#"
+                            class="button large"
+                            style="background: #2c3e50"
+                            >Узнать больше</a
+                          >
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="orbit-bullets">
+                    <button class="is-active" data-slide="0">
+                      <span class="show-for-sr">Слайд 1</span>
+                    </button>
+                    <button data-slide="1">
+                      <span class="show-for-sr">Слайд 2</span>
+                    </button>
+                    <button data-slide="2">
+                      <span class="show-for-sr">Слайд 3</span>
+                    </button>
+                    <button data-slide="3">
+                      <span class="show-for-sr">Слайд 4</span>
+                    </button>
+                  </nav>
+                </div>
+
+                <!-- АККОРДЕОН -->
+                <h3 class="section-title">⚙️ Управление и настройки</h3>
+                <ul
+                  class="accordion"
+                  data-accordion
+                  data-allow-all-closed="true"
+                >
+                  <li class="accordion-item is-active" data-accordion-item>
+                    <a href="#" class="accordion-title"
+                      >📊 Статистика системы</a
+                    >
+                    <div class="accordion-content" data-tab-content>
+                      <table class="hover">
+                        <thead>
+                          <tr>
+                            <th>Период</th>
+                            <th>Заказы</th>
+                            <th>Выручка</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Сегодня</td>
+                            <td>156</td>
+                            <td>₽89,420</td>
+                          </tr>
+                          <tr>
+                            <td>Вчера</td>
+                            <td>142</td>
+                            <td>₽78,200</td>
+                          </tr>
+                          <tr>
+                            <td>Неделя</td>
+                            <td>987</td>
+                            <td>₽542,300</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </li>
+                  <li class="accordion-item" data-accordion-item>
+                    <a href="#" class="accordion-title">⚙️ Настройки системы</a>
+                    <div class="accordion-content" data-tab-content>
+                      <form>
+                        <label
+                          >Название системы
+                          <input type="text" value="Админ-панель Дашборд" />
+                        </label>
+                        <label
+                          >Email администратора
+                          <input type="email" value="admin@dashboard.ru" />
+                        </label>
+                        <button type="submit" class="button primary">
+                          💾 Сохранить
+                        </button>
+                      </form>
+                    </div>
+                  </li>
+                  <li class="accordion-item" data-accordion-item>
+                    <a href="#" class="accordion-title"
+                      >🔔 Уведомления и логи</a
+                    >
+                    <div class="accordion-content" data-tab-content>
+                      <div class="callout success">
+                        <h5>✅ Успешно</h5>
+                        <p>Резервное копирование завершено.</p>
+                      </div>
+                      <div class="callout warning">
+                        <h5>⚠️ Предупреждение</h5>
+                        <p>Загрузка процессора достигла 85%.</p>
+                      </div>
+                      <pre>
+[2026-06-02 14:30:15] INFO: Backup completed successfully
+[2026-06-02 13:45:22] WARNING: CPU usage above 85%</pre
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Футер -->
+          <div class="cell shrink footer">
+            <p>
+              © 2026 Админ-панель «Дашборд» v2.0 | Техподдержка:
+              support@dashboard.ru
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Foundation JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.9.0/dist/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+
+      // Переключение темы
+      const html = document.documentElement;
+      const themeBtn = document.getElementById("themeToggle");
+      const themeBtnMobile = document.getElementById("themeToggleMobile");
+
+      // Загрузка сохранённой темы
+      const savedTheme = localStorage.getItem("dashboard-theme") || "light";
+      html.setAttribute("data-theme", savedTheme);
+      updateButton(savedTheme);
+
+      function toggleTheme() {
+        const current = html.getAttribute("data-theme");
+        const next = current === "light" ? "dark" : "light";
+        html.setAttribute("data-theme", next);
+        localStorage.setItem("dashboard-theme", next);
+        updateButton(next);
+      }
+
+      themeBtn.addEventListener("click", toggleTheme);
+      themeBtnMobile.addEventListener("click", toggleTheme);
+
+      function updateButton(theme) {
+        const icon = theme === "dark" ? "☀️" : "🌙";
+        const label = theme === "dark" ? "Светлая тема" : "Тёмная тема";
+
+        themeBtn.textContent = icon;
+        themeBtn.title = label;
+
+        themeBtnMobile.innerHTML = icon + " " + label;
+      }
+    </script>
+  </body>
+</html>
