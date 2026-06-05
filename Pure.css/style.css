@@ -1,0 +1,40 @@
+body {
+  color: #333;
+}
+.header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0.5rem 0;
+}
+.hero {
+  background: #f8f9fa;
+  padding: 4rem 0;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+.features {
+  padding: 3rem 0;
+  text-align: center;
+}
+.feature-card {
+  padding: 1rem;
+}
+.footer {
+  background: #333;
+  color: #eee;
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+.footer a {
+  color: #a0c4ff;
+  text-decoration: none;
+}
